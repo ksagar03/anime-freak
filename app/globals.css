@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +30,17 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+} */
+
+body {
+  background-color: black;
+}
+.red-gradient {
+  background: linear-gradient(92deg, #5c26e2 20%, #ee1e38 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+:root {
+  color-scheme: dark;
 }
