@@ -1,6 +1,7 @@
 import React from "react";
 import { data } from "./Anime_data";
 import AnimeCard from "./components/AnimeCard";
+import LoadMore from "./components/LoadMore";
 const Home = () => {
   return (
     <main className="sm-p-16 px-8 flex flex-col gap-10">
@@ -19,6 +20,7 @@ const Home = () => {
           />
         ))}
       </section>
+      <LoadMore />
     </main>
   );
 };
