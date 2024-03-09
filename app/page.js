@@ -1,8 +1,10 @@
 import React from "react";
-import { data } from "./Anime_data";
+// import { data } from "./Anime_data";
 import AnimeCard from "./components/AnimeCard";
 import LoadMore from "./components/LoadMore";
-const Home = () => {
+import { fetchAnimeData } from "./fetchaction";
+const Home = async () => {
+  const data = await fetchAnimeData(1)
   return (
     <main className="sm-p-16 px-8 flex flex-col gap-10">
       <h2 className="text-3xl text-white font-bold">Explore Anime</h2>

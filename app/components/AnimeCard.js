@@ -12,8 +12,13 @@ const AnimeCard = ({
 }) => {
   return (
     <div className="max-w-am rounded relative w-full">
-      <div className="relative lg:w-full h-[50vh] ">
-        <Image src={animeImage} alt={animeName} fill className="rounded-xl" />
+      <div className="relative lg:w-full h-[55vh] ">
+        <Image
+          src={`https://shikimori.one${animeImage}`}
+          alt={animeName}
+          fill
+          className="rounded-xl"
+        />
       </div>
       <div className="py-5 flex flex-col gap-3">
         <div className="flex justify-between items-center gap-1">
