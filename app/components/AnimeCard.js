@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import episode_view from "../../public/episodes_view.svg";
 import star from "../../public/stars_icons.svg";
+import { MotionDiv } from "./Framermotion";
+import { delay, easeInOut } from "framer-motion";
 const AnimeCard = ({
   animeImage,
   animeName,
@@ -9,15 +11,34 @@ const AnimeCard = ({
   animeAired,
   animeEpisodes,
   animeScore,
+  index,
 }) => {
+  const varients = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
   return (
-    <div className="max-w-am rounded relative w-full">
+    <MotionDiv
+      className="max-w-am rounded relative w-full"
+      // variants={varients}
+      // initial="hidden"
+      // animate="visible"
+      initial={{ y: -100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{
+        delay: index * 0.25,
+        ease: "easeInOut",
+        duration: 0.5,
+      }}
+      viewport={{ once: true }}
+    >
       <div className="relative lg:w-full h-[55vh] ">
         <Image
           src={`https://shikimori.one${animeImage}`}
           alt={animeName}
           fill
           className="rounded-xl"
+          priority
         />
       </div>
       <div className="py-5 flex flex-col gap-3">
@@ -58,7 +79,7 @@ const AnimeCard = ({
           </div>
         </div>
       </div>
-    </div>
+    </MotionDiv>
   );
 };
 
