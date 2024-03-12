@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { fetchAnimeData } from "../fetchaction";
 import AnimeCard from "./AnimeCard";
 
-let page = 2;
+let page = 8;
 const LoadMore = () => {
   const { ref, inView } = useInView();
   const [data, setData] = useState([]);
@@ -16,13 +16,14 @@ const LoadMore = () => {
       fetchAnimeData({ page: page }).then((res) => {
         setData([...data, ...res]);
       });
-      page++;
+      page*=2;
     }
   }, [inView]);
   return (
     <>
       <section className="grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-10">
         {data}
+        
       </section>
       <section className="flex justify-center items-center w-full" ref={ref}>
         <Image

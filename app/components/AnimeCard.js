@@ -3,7 +3,6 @@ import Image from "next/image";
 import episode_view from "../../public/episodes_view.svg";
 import star from "../../public/stars_icons.svg";
 import { MotionDiv } from "./Framermotion";
-import { delay, easeInOut } from "framer-motion";
 const AnimeCard = ({
   animeImage,
   animeName,
@@ -32,9 +31,9 @@ const AnimeCard = ({
       }}
       viewport={{ once: true }}
     >
-      <div className="relative lg:w-full h-[55vh] ">
+      <div className="relative lg:w-full h-[50vh] xl:h-[45vh] md:h-[40vh] ">
         <Image
-          src={`https://shikimori.one${animeImage}`}
+          src={animeImage}
           alt={animeName}
           fill
           className="rounded-xl"
@@ -64,7 +63,7 @@ const AnimeCard = ({
               className=" object-contain"
             />
             <p className="text-base text-white font-bold">
-              {animeEpisodes || animeAired}
+              {animeEpisodes || "Airing"}
             </p>
           </div>
           <div className=" flex flex-row gap-2 items-center">
