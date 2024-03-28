@@ -6,14 +6,16 @@ import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import { Button } from "@mui/material";
 
 export const MotionDiv = motion.div;
-// export const [animeSelected, setAnimeSelected] = useState(null);
+
 // export const handleClick = (id) => {
 //   setAnimeSelected(id);
 // };
 
 export const Btn = (uniqueId) => {
+   const [animeSelected, setAnimeSelected] = useState(null);
   return (
-    <Button sx={{ color: "#FFAD49" }} onClick={() => console.log(uniqueId)}>
+    <Button sx={{ color: "#FFAD49" }} onClick={ () => setAnimeSelected(uniqueId)
+    }>
       <DoubleArrowIcon className=" animate-pulse" />
     </Button>
   );

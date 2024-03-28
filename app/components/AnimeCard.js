@@ -3,6 +3,9 @@ import Image from "next/image";
 import episode_view from "../../public/episodes_view.svg";
 import star from "../../public/stars_icons.svg";
 import { Btn, MotionDiv } from "./ClientSide";
+import { Button } from "@mui/material";
+import KeyboardDoubleArrowRight from "@mui/icons-material/KeyboardDoubleArrowRight";
+import Link from "next/link";
 const AnimeCard = ({
   animeImage,
   animeName,
@@ -80,10 +83,12 @@ const AnimeCard = ({
             </div>
           </div>
           {/* <button onClick={handleClick(uniqueId)}>View more</button> */}
-          {/* <Button sx={{ color: "#FFAD49" }} onClick={() => onClicked(uniqueId)}>
-            <KeyboardDoubleArrowRightIcon />
-          </Button> */}
-          <Btn uniqueId={uniqueId} />
+          <Link href={"/" + uniqueId}>
+            <Button sx={{ color: "#FFAD49" }}>
+              <KeyboardDoubleArrowRight className=" animate-pulse" />
+            </Button>
+          </Link>
+          {/* <Btn uniqueId={uniqueId} /> */}
         </div>
       </div>
     </MotionDiv>

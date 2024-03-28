@@ -1,7 +1,6 @@
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 const dmsans = DM_Sans({ subsets: ["latin"] });
 import Head from "next/head";
@@ -21,8 +20,7 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body className={dmsans.className}>
           <AppRouterCacheProvider>
-            <main>
-              <Header />
+            <main className=" flex flex-col h-screen justify-between">
               {children}
               <Footer />
             </main>

@@ -25,8 +25,8 @@ export const fetchAnimeData = async ({ page }) => {
   //   setAnimeSelected(id)
   // };
 
-  return kitsudata.data.map((item, index) => (
-    <AnimeCard
+  return kitsudata.data.map((item, index) => (  
+   <AnimeCard
       key={item.id}
       uniqueId={item.id}
       index={index}
