@@ -41,6 +41,10 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.animename-gradient {
+  background: linear-gradient(to right, #add8e6, #663bf4, #ded6f1);
+  background-clip: text;
+}
 :root {
   color-scheme: dark;
 }

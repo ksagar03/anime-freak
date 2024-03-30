@@ -4,7 +4,7 @@ import Image from "next/image";
 import logo from "../../public/images/logo.jpg";
 const Header = () => {
   return (
-    <header className=" bg-home_bg bg-cover bg-no-repeat  ">
+    <header className=" bg-demon_bg bg-cover bg-no-repeat  ">
       <div className=" grid justify-center items-center py-4">
         <Image
           src={logo}

@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const { transform } = require("next/dist/build/swc");
+// const { fontFamily } = require("tailwindcss/defaultTheme");
 
 // import home_bgg from "./public/images/home_background.jpg";
 module.exports = {
@@ -12,24 +13,33 @@ module.exports = {
 
   theme: {
     extend: {
+      fontFamily: {
+        montserrat: ["Montserrat"],
+      },
+
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         home_bg: 'url("/images/Home_background.jpg")',
         home_bg_zoro: 'url("/images/Home_background_zoro.png")',
-        demon_bg: 'url("/images/1007550.jpg")'
+        demon_bg: 'url("/images/13.jpg")',
       },
       keyframes: {
         wiggle: {
           "0%,100%": { transform: "rotate(-15deg)" },
           "50%": { transform: "rotate(15deg)" },
         },
+        color_gradient: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "100%": { backgroundPosition: "100%" },
+        },
       },
 
       animation: {
         "spin-slow": "spin 8s linear infinite",
         wiggle: "wiggle 2s ease-in-out infinite",
+        gradient: " color_gradient 6s linear infinite",
       },
     },
     screens: {
