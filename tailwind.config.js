@@ -16,7 +16,10 @@ module.exports = {
       fontFamily: {
         montserrat: ["Montserrat"],
       },
-
+      aspectRatio: {
+        "4/1.5": "4/1.5",
+        "4/2": "4/2",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

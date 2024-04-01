@@ -3,7 +3,7 @@ import "./globals.css";
 import Footer from "./components/Footer";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 const dmsans = DM_Sans({ subsets: ["latin"] });
-const robot = Roboto_Mono({ subsets: ["latin"] });
+const roboto = Roboto_Mono({ subsets: ["greek"] });
 import Head from "next/head";
 
 // })
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         ></link>
       </Head>
       <html lang="en">
-        <body className="{robot.className}">
+        <body className="{roboto.className}">
           <AppRouterCacheProvider>
             <main className=" flex  flex-col h-screen justify-between">
               {children}

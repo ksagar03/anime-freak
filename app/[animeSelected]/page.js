@@ -4,10 +4,12 @@ import { FramerImage } from "../components/ClientSide";
 import Image from "next/image";
 import episode_view from "../../public/episodes_view.svg";
 import star from "../../public/stars_icons.svg";
+import { DiscriptionView } from "../components/ClientSide";
 
 const Info = async ({ params }) => {
   const data = await fetchIndividualData({ animeID: params.animeSelected });
   // console.log(data.data["attributes"].description);
+
   const dateformat = (data) => {
     const date = new Date(data);
     const options = {
@@ -33,7 +35,6 @@ const Info = async ({ params }) => {
             sizes="(max-width: 200px) 100vw,
               (max-width: 100px) 50vw,
               50vw"
-            objectFit="contain"
           />
         </div>
 
@@ -76,13 +77,37 @@ const Info = async ({ params }) => {
             </span>{" "}
             {dateformat(data.startDate)} - to -{" "}
             {data.endDate ? dateformat(data.endDate) : "?"}
-            <br />
-            ageRatingGuide: {data.ageRatingGuide}
-            <br />
-            youtubevideoID: {data.youtubeVideoId}
           </h1>
 
-          <p>Discription:{data.description}</p>
+          {/* <p className="text-pretty truncate line-clamp-5 px-4">
+            {data.description}
+          </p>
+          {data.description.length < 100 ? (
+            ""
+          ) : (
+            <div className="flex flex-row justify-end mx-5 mt-2">
+              {/* <button className="font-bold rounded-xl text-center px-4 p-2 border-2 text-[#FFAD49] ">
+                Show More
+              </button> */}
+          {/* <ShowMoreBtn />
+            </div> */}
+
+          {/* <ShowMoreBtn /> */}
+          <DiscriptionView description={data.description} />
+        </div>
+        <div className="col-span-12 p-6 flex flex-col">
+          <p className="animename-gradient text-4xl font-semibold text-transparent animate-gradient md:text-3xl xs:text-2xl p-4 px-12 pb-6 md:text-center">
+            Watch Trailer
+          </p>
+          <iframe
+            className="aspect-4/1.5 md:aspect-4/2 rounded-lg border-2 "
+            src={`https://www.youtube.com/embed/${data.youtubeVideoId}`}
+            title={data.titles.en}
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </>
