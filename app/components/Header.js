@@ -5,15 +5,7 @@ import logo from "../../public/images/logo.jpg";
 const Header = () => {
   return (
     <header className=" bg-demon_bg bg-cover bg-no-repeat  ">
-      <div className=" grid justify-center items-center py-4">
-        <Image
-          src={logo}
-          alt="logo"
-          width={50}
-          height={30}
-          className="rounded-full object-fill border-[3px] border-y-blue-600  border-x-green-600 animate-wiggle"
-        ></Image>
-      </div>
+      
       <div
         className="sm:pd-16 py-16 flex justify-center, lg:items-center
     max-lg:flex-col w-full sm:gap-16 gap-0"

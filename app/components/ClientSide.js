@@ -45,7 +45,7 @@ export const DiscriptionView = ({ description }) => {
   return (
     <>
       <p
-        className={`text-pretty px-4 ${
+        className={`text-pretty px-4 text-gray-300 ${
           showMore ? "" : "truncate line-clamp-5"
         }`}
       >
