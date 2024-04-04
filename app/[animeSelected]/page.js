@@ -22,7 +22,7 @@ const Info = async ({ params }) => {
   return (
     <>
       <div className=" grid grid-cols-12 py-10">
-        <div className="flex justify-center col-span-4 lg:w-full h-[65vh] lg:h-[60vh] xl:h-[60svh] md:col-span-12 py-8 ">
+        <div className="flex justify-center col-span-4 lg:w-full h-[400px] md:col-span-12 py-8 ">
           <FramerImage
             className=" rounded-lg border-2 bg-origin-border"
             // fill

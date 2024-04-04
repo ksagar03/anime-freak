@@ -35,7 +35,7 @@ module.exports = {
         },
         color_gradient: {
           "0%": { backgroundPosition: "0% 50%" },
-          "50%": {backgroundPosition:"50% 20%" },
+          "50%": { backgroundPosition: "50% 20%" },
           "100%": { backgroundPosition: "100% 50%" },
         },
       },
@@ -47,8 +47,9 @@ module.exports = {
       },
     },
     screens: {
+      "3xl": { max: "2580px" },
       // it will add a media query of max width
-      "2xl": { max: "1535px" },
+      "2xl": { max: "1920px" },
       // => @media (max-width: 1535px)
 
       xl: { max: "1279px" },
