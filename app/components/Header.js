@@ -5,14 +5,13 @@ import logo from "../../public/images/logo.jpg";
 const Header = () => {
   return (
     <header className=" bg-demon_bg bg-cover bg-no-repeat  ">
-      
       <div
         className="sm:pd-16 py-16 flex justify-center, lg:items-center
     max-lg:flex-col w-full sm:gap-16 gap-0"
       >
         <div className="flex flex-col gap-7">
           <h1 className=" px-2 sm:text-4xl md:text-5xl text-6xl text-white lg:max-w-lg font-bold flex flex-col leading-[120%]">
-            Watch your{" "}
+            Explore your{" "}
             <span className="red-gradient animate-pulse">
               favourite Anime's{" "}
             </span>
