@@ -40,7 +40,7 @@ const Info = async ({ params }) => {
 
         <div className=" col-span-8 md:col-span-12 md:text-center">
           <h1 className="animename-gradient text-6xl font-semibold text-transparent md:text-4xl xs:text-2xl p-3">
-            {data.titles.en}
+          {data.titles.en ? data.titles.en: data.titles.en_jp}
           </h1>
           <div className=" text-balance font-bold p-2 flex justify-start m-2 gap-3 text-[#FFAD49] md:justify-center md:-mt-1 ">
             <p className=" px-2 border-2 rounded-lg">{data.ageRating}</p>

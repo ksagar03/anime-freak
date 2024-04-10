@@ -46,12 +46,12 @@ export const DiscriptionView = ({ description }) => {
     <>
       <p
         className={`text-pretty px-4 text-gray-300 ${
-          showMore ? "" : "truncate line-clamp-5"
+          showMore ? "" : "truncate 3xl:line-clamp-2 lg:line-clamp-4"
         }`}
       >
         {description}
       </p>
-      {description.length < 100 ? (
+      {description.length < 200 ? (
         ""
       ) : (
         <div className="flex flex-row justify-end mx-12 mt-2 md:justify-center md:mx-0">
