@@ -23,7 +23,7 @@ const AnimeCard = ({
   };
   return (
     <MotionDiv
-      className="max-w-am rounded relative w-full"
+      className="max-w-am rounded-md relative w-ful bg-gray-900"
       // variants={varients}
       // initial="hidden"
       // animate="visible"
@@ -45,7 +45,7 @@ const AnimeCard = ({
           priority
         />
       </div>
-      <div className="py-5 flex flex-col gap-3">
+      <div className=" px-3 py-5 flex flex-col gap-3">
         <div className="flex justify-between items-center gap-1">
           <h2 className="font-bold text-white text-xl line-clamp-1 w-full">
             {animeName}
@@ -84,7 +84,7 @@ const AnimeCard = ({
           </div>
           {/* <button onClick={handleClick(uniqueId)}>View more</button> */}
           <Link href={"/" + uniqueId}>
-            <Button sx={{ color: "#FFAD49" }}>
+            <Button className="left-3" sx={{ color: "#FFAD49" }}>
               <KeyboardDoubleArrowRight className=" animate-pulse" />
             </Button>
           </Link>

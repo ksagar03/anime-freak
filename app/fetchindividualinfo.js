@@ -3,6 +3,7 @@ export const fetchIndividualData = async ({ animeID }) => {
     `https://kitsu.io/api/edge/anime/${animeID}`
   );
   const animedata = await kitsuanimedata_res.json();
+  console.log(animedata)
 
   return animedata.data.attributes;
 };
