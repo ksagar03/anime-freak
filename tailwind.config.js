@@ -38,12 +38,30 @@ module.exports = {
           "50%": { backgroundPosition: "50% 20%" },
           "100%": { backgroundPosition: "100% 50%" },
         },
+        typing: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden"
+          },
+          "100%": {
+            width: "100%"
+          }  
+        },
+        blink: {
+          "50%": {
+            borderColor: "transparent"
+          },
+          "100%": {
+            borderColor: "white"
+          }  
+        },
       },
 
       animation: {
         "spin-slow": "spin 8s linear infinite",
         wiggle: "wiggle 2s ease-in-out infinite",
         gradient: "color_gradient 2s ease-in-out infinite",
+        typing: "typing 2s steps(20) infinite alternate, blink 0.7s infinite "
       },
     },
     screens: {

@@ -22,10 +22,10 @@ const Header = () => {
     max-lg:flex-col w-full sm:gap-16 gap-0"
       >
         <div className="flex flex-col gap-7">
-          <h1 className=" px-2 sm:text-4xl md:text-5xl text-6xl text-white lg:max-w-lg font-bold flex flex-col leading-[120%]">
+          <h1 className=" px-8 sm:text-4xl md:text-5xl text-6xl text-white lg:max-w-lg font-bold flex flex-col leading-[120%] ">
             Explore your{" "}
-            <span className="red-gradient animate-pulse">
-              favourite Anime's{" "}
+            <span className="red-gradient animate-typing">
+            favourite Anime's
             </span>
             at your peak.
           </h1>
